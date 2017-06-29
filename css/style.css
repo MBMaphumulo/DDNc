@@ -1,0 +1,288 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: Arial,Helvetica,Sans-serif;
+    font-size: 12px;
+}
+
+.headerMenu{
+    background-color:rgba(0,0,0,0.6);
+    height: 70px;
+    border-bottom: 0px;
+    padding-left: auto;
+    padding-right: auto;
+    width:100%;  
+    border:medium none; border-radius:0;
+
+}
+
+#wrapper{
+    margin-left: auto;
+    margin-right:auto;
+    width:1000px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.siteName{
+    padding-top: 20px;
+    font-size:25px;
+    font-weight: bold;
+}
+.logo{
+    width:125px;
+
+}
+
+.logo img{
+    width:150px;
+    height: 38px;
+    
+}
+
+#search input[type="text"]:focus{
+    background-color: rgba(0,0,0,0.5);
+    padding: 9px 15px 6px 10px;
+    color: white;
+    width: 300px;
+    padding: 6px 15px 6px 35px;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1),0 1px 0px rgba(0,0,0,0.9)inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1),0 1px 0px rgba(0,0,0,0.9)inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.1),0 1px 0px rgba(0,0,0,0.9)inset; 
+}
+
+#menu{
+    margin-top: -35px;
+    margin-left: 50px;
+}
+
+#menu a{
+    float: right;
+    color:aliceblue;
+    font-size: 12pt;
+    font-family: Arial,Helvetica,sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: -10px;
+    color:#ddd;
+     font-family:'Oswald',sans-serif;
+      display:inline-block; 
+      height:50px; line-height:50px;
+       padding:0 9px; 
+       text-shadow:0 1px 1px #000;
+        text-transform:uppercase;
+         -webkit-transition:all 0.5s; 
+         -mz-transition:all 0.5s; 
+         -ms-transition:all 0.5s; 
+         -o-transition:all 0.5s; 
+         transition:all 0.5s
+}
+
+#menu a:hover{
+    border-bottom: 5px solid aqua;
+   
+    color:black;
+}
+
+.search_box{
+    position: absolute;
+    margin-top: -30px;
+    margin-right:0px;
+    font-size: 15pt;  
+}
+
+#search input[type="text"]{
+    padding: 9px 15px 6px 10px;
+    border: 0 none;
+    margin: 0;
+    font: bold 15px Arial,Helvetica,Sans-serif;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2)inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2)inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2)inset; 
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+h2{
+    font-family: Arial,Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 8px;
+    color: skyblue;
+}
+h3{
+    font-family: Arial,Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 8px;
+    color: #0084c6;
+    border: 1px solid rgba(0,110,220,0.3);
+    border-left: 0 solid white;
+    border-right: 0 solid white;
+}
+
+input{
+    background-color: #FFFFFF;
+    font-size: 15px;
+    padding: 5px;
+    width:300px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+td>textarea{
+    background-color: #FFFFFF;
+    border: 1px solid #006FC4;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+input:hover,td>textarea:hover{
+    border: 1px solid rgba(0,110,220,0.3);
+}
+
+input[type="submit"]{
+    background-color: skyblue;
+    border: 1px solid #00508D;
+    font-size:15px;
+    color:#FFFFFF;
+    padding: 5px;
+    width: 313px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p{
+    padding-top: 10px; 
+}
+
+.profileLeftSideContect{
+    width: 194px;
+    padding: 5px 0px 20px 0px;
+    height: auto;
+}
+
+.postForm{
+    float: right;
+    width: 780px;
+    height: 80px;
+    background-color: #F3F6F9;
+    padding: 5px;
+    padding-top :0px;
+}
+
+.profilePosts{
+    float: right;
+    width: 746px;
+    height: 414px;
+    background-color: #DCE5EE;
+    padding: 20px;
+}
+
+input.btnPost{
+    float:right;
+    border-radius:0;
+    width:100px;
+    height:70px;
+    padding: 0;
+    margin-top:-0.1px;
+    outline:2px solid rgba(0,0,0,0.3);
+}
+.btnPost:hover{
+    cursor: pointer;
+}
+
+textarea{
+    
+}
+
+.profilePost hr{
+    background-color: #DCE5EE;
+    height: 1px;
+    border: 0;
+}
+
+.posted_by {
+    font-weight: 800;
+    color: #000;
+    float: left;
+    margin-right: 10px;
+}
+
+.posted_by a {
+    font-weight: 800;
+    color: #000;
+    text-decoration: none;
+}
+
+.posted_by a:hover {
+    font-weight: 800;
+    color: #000;
+    text-decoration: underline;
+}
+
+
+hr{
+    background-color: #DCE5EE;
+    height: 1px;
+    border: 0;
+}
+
+td>input{
+    border-radius: 5px;
+}
+
+td.tdd{
+    font-family: Arial,Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 8px;
+    color: #0084c6;
+}
+.Usernamee{
+    float:left;
+    margin-top: 1px;
+    margin-left: -170px;
+    margin-right: 20px;
+    font-size: 18pt;
+    font-weight: 800;
+    color:aqua;
+}
+.Usernamee>img{
+    float:left;
+    margin-top: 1px;
+    margin-right: 20px;
+    width:40px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.leftResults{
+    float:left;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.rightResults{
+    padding-top: 10px
+}
+.chrt>input[type="submit"]{
+    font-size:15px;
+    text-align: left;
+    width: 100%;
+    color:black;
+    cursor: pointer;
+    font-weight: 800;
+    border:0;
+}
+.chrt:hover{
+    cursor: pointer;
+    opacity: 0.3;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+}

@@ -1,0 +1,55 @@
+/*   
+$sql_sent = "SELECT * 
+                FROM Messages
+                    WHERE sent_by = '$user_login' AND 
+                          sent_to = '$sent_too'
+                          ORDER BY id;
+                    ";
+    
+$sql_sent_to = "SELECT * 
+                FROM Messages
+                    WHERE sent_by = '$sent_too' AND 
+                          sent_to = '$user_login'
+                          ORDER BY id;
+                    ";
+
+$msg_by = mysql_query($sql_sent);
+$msg_to = mysql_query($sql_sent_to);
+
+
+    
+while($row_by = mysql_fetch_array($msg_by)){
+        $sent_by = $row_by["sent_by"];
+    $sent_to = $row_by["sent_to"];
+    $msgg = $row_by["message"];
+//    $date = $row_by["date"];
+
+     echo '<div style="text-align:left;margin:10px;width:50%;float:left;background-color:grey;padding:10px;border-radius:5px;color:white;" class="message">'.$msgg.'</div><div style="clear:left;"></div>';
+    /*
+    echo '<div style="text-align:right;margin:10px;width:50%;float:right;background-color:grey;padding:10px;border-radius:5px;color:white;" class="message">'.$msgg.'</div><div style="clear:right;"></div>';
+    
+ while($row_to = mysql_fetch_array($msg_to)){
+     
+    $sent_by = $row_to["sent_by"];
+    $sent_to = $row_to["sent_to"];
+    $msgg = $row_to["message"];
+    
+    
+//    $date = $row_to["date"];
+//    $viewd = $row["viewed"];
+  /*  if($sent_by == $user_login){
+        echo '<div style="text_algin:right;" class="message">'.$msgg.'</div>';
+    }  
+    else{
+        echo '<div style="text_algin:left;" class="message">'.$msgg.'</div>';
+ 
+ 
+ }
+echo '<div style="text-align:right;margin:10px;width:50%;float:right;background-color:grey;padding:10px;border-radius:5px;color:white;" class="message">'.$msgg.'</div><div style="clear:right;"></div>';
+     echo '<div style="text-align:left;margin:10px;width:50%;float:left;background-color:grey;padding:10px;border-radius:5px;color:white;" class="message">'.$msgg.'</div><div style="clear:left;"></div>';
+    break;
+ }
+
+   
+}
+*/
