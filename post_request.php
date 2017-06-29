@@ -46,8 +46,8 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 							 <div class="post_commentbox"> <a href="#"><i class="fa fa-user"></i>'.$userPost.'</a> <span><i class="fa fa-calendar"></i>'.$time.'</span> <a href="#"><i class="fa fa-tags"></i>DDN</a> </div>
 							 <div class="row">
 								<div class="row">
-									<div class="col-md-offset-1 col-md-11 col-sm-11 col-xs-11">
-										<center><h3><div class="viewPost"><input style="color:white;background-color:black;border:0px solid black;" type="submit" name="postHeader" value="'.$pH.'" /></div></h3></center>
+									<div class=">
+										<center><span clas="font-size:20pt;font-weught:bold;"><div class="viewPost"><input style="color:white;background-color:black;border:0px solid black;" type="submit" name="postHeader" value="'.$pH.'" /></div></span></center>
 									</div> 
 								</div>
 								<div class="row">
@@ -55,7 +55,7 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 										<p>'.$pB.'</p>
 									</div>
 									<div class="col-md-offset-1  col-md-3 col-sm-3 col-xs-3">
-										<img width="170" height="85" src="'.$pp.'" alt="postImage" />
+										<img width="170" height="85" src="/DDN/'.$pp.'" alt="postImage" />
 									</div>
 								</div>
 							 </div>	

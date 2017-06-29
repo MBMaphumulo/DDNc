@@ -66,7 +66,7 @@ include("inc/header.inc.php");
 
 				 		if(@$pp != ""){
 
-				 			echo '<div class="single_page_content"> <img class="img-center" src="'.$pp.'" alt=""> ';
+				 			echo '<div class="single_page_content"> <img class="img-center" src="/DDN/'.$pp.'" alt=""> ';
 				 		}
 
 				 	?>
@@ -98,8 +98,4 @@ include("inc/header.inc.php");
 				  </ul>
 				</div>
 	</div>
-     
-    </div>
-  </section>
-</div>
-<?php include("inc/footer.inc.php");?>
+<?php include("/DDN/inc/overall/footer.php");?>

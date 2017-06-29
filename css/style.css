@@ -88,6 +88,7 @@
 .search_box{
     position: absolute;
     margin-top: -30px;
+    margin-left:-200px;
     margin-right:0px;
     font-size: 15pt;  
 }
@@ -95,7 +96,7 @@
 #search input[type="text"]{
     padding: 9px 15px 6px 10px;
     border: 0 none;
-    margin: 0;
+    margin-left: 300px;
     font: bold 15px Arial,Helvetica,Sans-serif;
     text-shadow: 0 2px 2px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.1),0 1px 3px rgba(0,0,0,0.2)inset;
