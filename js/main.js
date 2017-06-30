@@ -22,4 +22,6 @@ function send_post(){
 hr.send(vars);
 document.getElementById("status").innerHTML = "processing ... ";
 
+
 }
+

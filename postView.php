@@ -1,16 +1,22 @@
 
 <?php
 include("inc/header.inc.php");
+
+if(!isset($_POST["postHeader"])){
+             echo '
+            <div class="container">
+<center><div style="font-weight:bold;font-size:50px;color:red;">404</div>
+<hr style="border-bottom: 1px solid grey;"/>
+<p><h2 style="color:black;">Sorry but were expriencing technical problems. Please try again </h2></p>
+</center>
+</div>
+   
+    ';
+    exit();
+}
+
 ?>
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/font.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/li-scroller.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
-       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<?php include("pageLinks.php");?>
 <style>
 	
 
@@ -27,10 +33,11 @@ include("inc/header.inc.php");
 			$results = $conn->query($sql);
 
 			while($row = $results->fetch_assoc()){
-				$pH = $row['post_header'];
-				$pB = $row['post_body'];
-				$pp = $row['post_pic'];
-				$userPost = $row['first_name'];
+				$_SESSION['pH'] = $row['post_header'];
+				$_SESSION['pB'] = $row['post_body'];
+				$_SESSION['ppp'] = $row['post_pic'];
+                $pp = $row['post_pic'];
+				$_SESSION['fName'] = $row['first_name'];
 			}
 
 		}
@@ -43,7 +50,7 @@ include("inc/header.inc.php");
 
 
 <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
-<div class="container">
+
 
   <section id="contentSection">
     <div class="row">
@@ -66,26 +73,31 @@ include("inc/header.inc.php");
 
 				 		if(@$pp != ""){
 
-				 			echo '<div class="single_page_content"> <img class="img-center" src="/DDN/'.$pp.'" alt=""> ';
+				 			echo '<div class="single_page_content"> <img class="img-center" src="/DDN/'.@$_SESSION['ppp'].'" alt=""> ';
 				 		}
 
 				 	?>
 					 
-					 <h1><?php echo @$pH;?></h1>
+                    
+					 <h1><?php echo @$_SESSION['pH'];?></h1>
 					 <p><p/>
-					 <blockquote><?php echo @$pB;?></blockquote>
+					 <blockquote><?php echo @$_SESSION['pB'];?></blockquote>
 					
 					<div class="row">
 						<div class="col-md-1 rate">
-							<div class="btn btn-success img-circle"></div><div class="btn btn-danger"></div>
+                          <form action="approvePost.php" method="POST">
+							<button id="approve" type="submit" style="width:30px;margin-top:10px;background-color:green;border-radius:50%;" name="postRequested"> <span style="color:white;" class="glyphicon glyphicon-ok"></span></button>
+                            <button id="onHold"  type="submit" style="width:30px;margin-top:10px;background-color:red;border-radius:50%;" name="postRequested"><span style="color:white;" class="glyphicon glyphicon-remove"></span></button>
+                         </form>
+            
 						</div>
 						<div class="col-md-10">
 							<form class="">
-								  <textarea type="text" class="form-control commentt" id="exampleInputAmount" placeholder="Comment..."></textarea> 
+								  <textarea style="" rows="3" type="text" class="form-control commentt" id="exampleInputAmount" placeholder="Comment..."></textarea> 
 							</form>
 						</div>
 						<div class="col-md-1">
-						   <input style="width: 100px;margin-left: -30px;height: 50px;margin-top: -0.5px;" type="submit" class="input-group btn btn-primary btnComment" name="btnComment" value="Send"/>
+						   <input style="width: 100px;margin-left: -10px;height: 70px;margin-top: -0.5px;" type="submit" class="input-group btn btn-primary btnComment" name="btnComment" value="Send"/>
 						</div>
 					</div>
 				</div>
@@ -98,4 +110,7 @@ include("inc/header.inc.php");
 				  </ul>
 				</div>
 	</div>
-<?php include("/DDN/inc/overall/footer.php");?>
+    </section>
+</div>
+</div><!--closing the mainDiv from Header-->
+<?php include("../DDN/inc/overall/footer.php");?>

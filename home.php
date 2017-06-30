@@ -12,9 +12,9 @@ if(!isset($_SESSION["user_login"])){
     ';exit();
 }
 echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
-
+include("pageLinks.php");
 ?>
-<div style="clear:both;width:100%;margin:0;padding:10px;height:100%;" class="profilePosts">
+<div style="clear:both;width:100%;margin:0;padding:20px 10px 0 10px;height:100%;" class="profilePosts">
 <?php
      $getposts = mysqli_query($conn,"SELECT * 
                                 FROM postss
@@ -26,11 +26,11 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
         $date_added = $row['date_added'];
         $added_by = $row['added_by'];
 
-        echo '<form action="postView.php" method="POST">
-                  <p><div class="posted_by">
-                    <input style="background-color:grey;border:0 solid grey;width:100px;" type="submit" name="userPost" value="'.$added_by.'"</a> --
+        echo '
+                  <div class="posted_by">
+                    '.$added_by.' --
                       </div> <div class=""> '.$body.'<br/> time - '.$date_added.' </div></p><hr style="border-bottom:1px solid skyblue;"/>
-                    </form>
+               
             ';
     }
 ?>
@@ -38,3 +38,5 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 
 
 </div>
+</div><!--closing the mainDiv from Header-->
+<?php include("../DDN/inc/overall/footer.php");?>

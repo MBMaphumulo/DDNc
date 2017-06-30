@@ -37,7 +37,7 @@ $errorPic = "";
 if(isset($_POST['oldpassword']) && isset($_POST['newpassword']) && isset($_POST['newpassword2'])){
     $oldpass = md5($_POST['oldpassword']);
     $pass_Checksql = "SELECT * 
-                        FROM users
+                        FROM userss
                             WHERE username = '$user' AND
                             password = '$oldpass' LIMIT 1";
     
@@ -50,7 +50,7 @@ if(isset($_POST['oldpassword']) && isset($_POST['newpassword']) && isset($_POST[
         if($newPass == $newPass2){
              $newPass =  md5($newPass);
             
-               $updatePass = "UPDATE users
+               $updatePass = "UPDATE userss
                         set password = '$newPass' WHERE username = '$user'";
             
             mysqli_query($conn,$updatePass) or die();
@@ -74,13 +74,13 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email'])){
             $newEmail = $_POST['email'];
             $newBio = $_POST['boi'];
     
-            $updatePass = "UPDATE users
+            $updatePass = "UPDATE userss
                         set first_name = '$newFname',last_name = '$newLname',email = '$newEmail',boi = '$newBio'  WHERE username = '$user'";
             
             mysqli_query($conn,$updatePass) or die();
-            $error_msg2 = "<b style='color:lime;'>Infor updated</b>";
+            $error_msg2 = "<b style='color:lime;'>Information updated</b>";
         $sql = mysqli_query($conn,"SELECT * 
-                            FROM users 
+                            FROM userss 
                             WHERE `username` = '$user' LIMIT 1");
     
     $userCount = mysqli_num_rows($sql);
@@ -109,14 +109,14 @@ if(isset($_FILES['pp'])){
              move_uploaded_file(@$_FILES['pp']["tmp_name"], "userdata/profile_pics/$g_rand_dir/".@$_FILES['pp']["name"]);
              $dir = 'userdata/profile_pics/'.$g_rand_dir.'/'.@$_FILES["pp"]["name"];
             
-             $updatePp = "UPDATE users
+             $updatePp = "UPDATE userss
                                 set profile_pic = '$dir'
                                     WHERE username = '$user'";
              mysqli_query($conn,$updatePp);
              $errorPic = "<b style='color:lime;'> picture uploaded </b>";
 
                $sql = mysqli_query($conn,"SELECT * 
-                            FROM users 
+                            FROM userss 
                             WHERE `username` = '$user_login' LIMIT 1");
     
     

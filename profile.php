@@ -32,7 +32,7 @@ if(isset($_POST["userChrt"])){
 ?>
 <div class="postForm">
     <form>
-         <textarea id="post" name="post" rows="5" cols="109" placeholder="What's is happening?..." required=""></textarea>
+         <textarea id="post" name="post" style="margin: 0px;width: 676px;height: 69px;" placeholder="What's is happening?..." required=""></textarea>
         <input type="submit" onclick="javascript:send_post()" name="send" value="POST" class="btnPost" />
     </form> 
 </div>
@@ -52,7 +52,7 @@ if(isset($_POST["userChrt"])){
         $added_by = $row['added_by'];
         
         echo '<p><div class="posted_by">
-                    <a href="#">'.$added_by.'</a> - '.$date_added.' > 
+                     '.$date_added.' > 
              </div> <div class=""> '.$body.'</div></p><hr/>
             ';
     }

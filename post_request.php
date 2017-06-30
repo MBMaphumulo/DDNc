@@ -23,13 +23,13 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 			
 				$pH = "";
 				$pB = "";
-				$req = 1;
+				$req = 0;
 				$sql = "SELECT * FROM posts P,users S  WHERE post_request = '$req' AND P.added_by = S.user_id ORDER BY post_id DESC ";
 				
 				
 				$results = $conn->query($sql);
 				
-				if($results){
+				if(mysqli_num_rows($results) > 0){
 						
 						while($row = $results->fetch_assoc()){
 							$pH = $row['post_header'];
@@ -46,8 +46,8 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 							 <div class="post_commentbox"> <a href="#"><i class="fa fa-user"></i>'.$userPost.'</a> <span><i class="fa fa-calendar"></i>'.$time.'</span> <a href="#"><i class="fa fa-tags"></i>DDN</a> </div>
 							 <div class="row">
 								<div class="row">
-									<div class=">
-										<center><span clas="font-size:20pt;font-weught:bold;"><div class="viewPost"><input style="color:white;background-color:black;border:0px solid black;" type="submit" name="postHeader" value="'.$pH.'" /></div></span></center>
+									<div class="col-md-offset-1 col-md-11 col-sm-11 col-xs-11">
+										<center><h3><div class="viewPost"><input style="color:white;background-color:black;border:0px solid black;" type="submit" name="postHeader" value="'.$pH.'" /></div></h3></center>
 									</div> 
 								</div>
 								<div class="row">
@@ -77,7 +77,7 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 									</div>
 								</div>
 							 </div>
-							 <form action="postView.php" method="POST">
+							 <form/">
 							';
 							
 							}
@@ -85,9 +85,7 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 						}
 				}else{
 						echo '
-								<div class="single_page_content"> 
-									<h1>0 posts</h1>
-							   </div>
+                            <div style="color:green;font-weight:bold;font-size:20pt;">0 Posts requested</div>
 						';
 				}
 			
