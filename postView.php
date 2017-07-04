@@ -86,8 +86,8 @@ if(!isset($_POST["postHeader"])){
 					<div class="row">
 						<div class="col-md-1 rate">
                           <form action="approvePost.php" method="POST">
-							<button id="approve" type="submit" style="width:30px;margin-top:10px;background-color:green;border-radius:50%;" name="postRequested"> <span style="color:white;" class="glyphicon glyphicon-ok"></span></button>
-                            <button id="onHold"  type="submit" style="width:30px;margin-top:10px;background-color:red;border-radius:50%;" name="postRequested"><span style="color:white;" class="glyphicon glyphicon-remove"></span></button>
+							<button id="approve" type="submit" style="width:30px;margin-top:10px;background-color:green;border-radius:50%;" name="postApproved"> <span style="color:white;" class="glyphicon glyphicon-ok"></span></button>
+                            <button id="onHold"  type="submit" style="width:30px;margin-top:10px;background-color:red;border-radius:50%;" name="postDdeclined"><span style="color:white;" class="glyphicon glyphicon-remove"></span></button>
                          </form>
             
 						</div>
