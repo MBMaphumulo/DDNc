@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(isset($_SESSION['pH'])){
         if(isset($_POST["postApproved"])){
             
-            $sql = "UPDATE Posts SET post_request = 1,statuss = 'Approved',approved_byy = '".$_SESSION["user_login"]."' WHERE post_header = '".$_SESSION['pH']."'";
+            $sql = "UPDATE Posts SET post_request = 1,statuss = 'Approved',approved_byy = 'by ".$_SESSION["user_login"]."' WHERE post_header = '".$_SESSION['pH']."'";
 
             $result = mysqli_query($conn,$sql);
 
@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             }
         }else{
             
-             $sql = "UPDATE Posts SET post_request = -1,statuss = 'Declined',approved_byy = '".$_SESSION["user_login"]."' WHERE post_header = '".$_SESSION['pH']."'";
+             $sql = "UPDATE Posts SET post_request = -1,statuss = 'Declined',approved_byy = 'by ".$_SESSION["user_login"]."' WHERE post_header = '".$_SESSION['pH']."'";
 
             $result = mysqli_query($conn,$sql);
 
