@@ -1,4 +1,5 @@
-<?php include ("connection.inc.php"); 
+<?php include("connection.inc.php"); 
+
 session_start();
 ?>
 <!DOCTYPE HTML>
@@ -7,11 +8,15 @@ session_start();
         <title>DDN Concellor</title>
 
         <link type="text/css" rel="stylesheet" href="css/style.css" />
-
+<?php
+include("models.php");
+?>
     </head>
     <body>
         <script src="js/main.js"></script>
         <script src="js/jquery.min.js"></script>
+        <script src="js/DDNc.js"></script>
+
      <div class="headerMenu">
         <div id="wrapper">
             <div class="logo">
@@ -37,6 +42,7 @@ session_start();
                             <a href="account_settings.php">Account</a>
                             <a href="profile.php">Profile</a>
                             <a href="post_request.php">Post Requests</a>
+                            <a href="send_users.php">Post</a>
                             <a href="Chats.php">Chats</a>
                         ';
                 }
