@@ -73,7 +73,7 @@ if(!isset($_POST["postHeader"])){
 
 				 		if(@$pp != ""){
 
-				 			echo '<div class="single_page_content"> <img class="img-center" src="/DDN/'.@$_SESSION['ppp'].'" alt=""> ';
+				 			echo '<div class="single_page_content"> <img class="img-center" src="/GitHub/DDN/'.@$_SESSION['ppp'].'" alt=""> ';
 				 		}
 
 				 	?>
