@@ -55,7 +55,7 @@ echo "<h2>Hello, ".$_SESSION["user_login"]."</h2>";
 										<p>'.$pB.'</p>
 									</div>
 									<div class="col-md-offset-1  col-md-3 col-sm-3 col-xs-3">
-										<img width="170" height="85" src="/DDN/'.$pp.'" alt="postImage" />
+										<img width="170" height="85" src="../DDN/'.$pp.'" alt="postImage" />
 									</div>
 								</div>
 							 </div>	

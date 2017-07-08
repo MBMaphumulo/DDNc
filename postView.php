@@ -57,7 +57,7 @@ if(!isset($_POST["postHeader"])){
 	<div class="col-md-3 col-lg-3 col-xs-3 text-center" >
 			<h1 style="margin-left:-50px;">Post</h1>
 	 		<div class="imagee">
-	 			<img id="avatarr" width="200" height="200" src="<?php echo @$_SESSION['pp'];?>" alt="image" style="margin-left: -50px;"/>
+	 			<img id="avatarr" width="200" height="200" src="../DDNc/<?php echo @$_SESSION['pp'];?>" alt="image" style="margin-left: -50px;"/>
 	 		</div>
 	 		<div class="UserDetails">
 	 			<div><h3><?php echo @$_SESSION['first_name'];?> <?php echo @$_SESSION['last_name'];?></h3></div><button id="btnCallPost" class="btn btn-primary">POST</button>
@@ -73,7 +73,7 @@ if(!isset($_POST["postHeader"])){
 
 				 		if(@$pp != ""){
 
-				 			echo '<div class="single_page_content"> <img class="img-center" src="/DDN/'.@$_SESSION['ppp'].'" alt=""> ';
+				 			echo '<div class="single_page_content"> <img class="img-center" src="../DDN/'.@$_SESSION['ppp'].'" alt=""> ';
 				 		}
 
 				 	?>

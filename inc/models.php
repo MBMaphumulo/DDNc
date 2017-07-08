@@ -1,5 +1,11 @@
 
 <div id="overlay"></div>
+<div id="frameImg">
+    <button id="btnCloss" type="button" style="margin-left:640px;margin-top:-20px;outline:none;background-color: white;border: 0px solid white;font-size:30px;">&times;</button>
+    <form>
+      <img src="" alt="" width="650px" height="500px;" style="border:4px solid wheat"/>
+    </form> 
+</div>
 <div id="myPost">
     <form action="send_users.php" method="POST" enctype="multipart/form-data">
         <div class="row">
