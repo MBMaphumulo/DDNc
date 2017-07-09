@@ -12,9 +12,9 @@ if(isset($_FILES['profile'])){
     if((@$_FILES['profile']["type"]=="image/jpeg") || ($_FILES['profile']["type"]=="image/gif") || ($_FILES['profile']["type"]=="image/png") && $_FILES['profile']["size"] <= 10048576 ) {
         $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         $g_rand_dir = substr(str_shuffle($chars), 0, 15);
-        mkdir("userdata/profile_pics/$g_rand_dir");
+        mkdir("../DDN/userdata/profile_pics/$g_rand_dir");
 			
-			$dir = 'userdata/profile_pics/'.$g_rand_dir.'/'.$_FILES["profile"]["name"];
+			$dir = '../DDN/userdata/profile_pics/'.$g_rand_dir.'/'.$_FILES["profile"]["name"];
              move_uploaded_file($_FILES['profile']["tmp_name"], $dir);
     }
     else{
